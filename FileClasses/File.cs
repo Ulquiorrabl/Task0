@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Task0
 {
-    class File
+    class File : IPlay
     {
         public string Name { get; private set; }
         public float Size { get; private set; }
@@ -20,6 +20,21 @@ namespace Task0
             {
                 this.Name = name;
             }
+        }
+
+        public void Play()
+        {
+            Console.WriteLine("Show");
+        }
+
+        public void Stop()
+        {
+            Console.WriteLine("Stop");
+        }
+
+        public void Reset()
+        {
+            Console.WriteLine("Show");
         }
     }
 }

@@ -6,24 +6,17 @@ namespace Task0
     {
         static void Main(string[] args)
         {
-            string name;
-            float size;
-            File[] Mediateka = new File[10];
-            for(int i = 0; i < Mediateka.Length; i++)
-            {
-                Mediateka[i] = new File("name", 0);
-                Console.WriteLine("Input name and size:");
-                name = Console.ReadLine();
-                try
-                {
-                    size = float.Parse(Console.ReadLine());
-                }
-                catch(Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-                
-            }
+            Photo photo1 = new Photo("Parents", 124, 1080);
+            Track track = new Track("Bring me The Horizon - Doomed", 4.5f, 4.06f);
+            Video video = new Video("Meeting 19.01.2020", 118, 20.45f, 128);
+
+            Mediateka media = new Mediateka(new File[] {photo1, track, video});
+            media.ShowMedia();
+            Photo photo2 = new Photo("Children", 45, 720);
+            media.Add(photo2);
+            Console.WriteLine("");
+            media.ShowMedia();
+            Console.ReadKey();
         }
     }
 }
