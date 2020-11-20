@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Task0
+namespace Task0.Files
 {
-    class File : IPlay
+    internal class File
     {
         public string Name { get; private set; }
         public float Size { get; private set; }
@@ -22,19 +22,5 @@ namespace Task0
             }
         }
 
-        public void Play()
-        {
-            Console.WriteLine("Show");
-        }
-
-        public void Stop()
-        {
-            Console.WriteLine("Stop");
-        }
-
-        public void Reset()
-        {
-            Console.WriteLine("Show");
-        }
     }
 }
