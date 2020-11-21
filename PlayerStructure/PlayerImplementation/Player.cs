@@ -16,5 +16,10 @@ namespace Task0.PlayerStructure.PlayerImplementation
         {
 
         }
+        
+        protected void Decode(File file)
+        {
+
+        }
     }
 }

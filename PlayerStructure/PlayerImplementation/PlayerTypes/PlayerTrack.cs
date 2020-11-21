@@ -1,10 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Task0.Files.FileTypes;
 
 namespace Task0.PlayerStructure.PlayerImplementation.PlayerTypes
 {
     class PlayerTrack : Player
     {
+        public void Play(Track track)
+        {
+            Decode(track);
+        }
+
+        public new void Stop()
+        {
+
+        }
+
+        void Decode(Track track)
+        {
+
+        }
     }
 }

@@ -14,12 +14,14 @@ namespace Task0.Files
             this.Name = name;
             this.Size = size;
         }
+        public File()
+        {
+            this.Name = "";
+            this.Size = 0;
+        }
         public void ChangeName(string name)
         {
-            if(name != null)
-            {
-                this.Name = name;
-            }
+
         }
 
     }
