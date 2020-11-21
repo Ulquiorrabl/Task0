@@ -13,7 +13,7 @@ namespace Task0.Mediateka.MediatekaImplementation
         Storage storage;
         int index;
         
-        public void Start()
+        public Mediateka()
         {
             playerfactory = new PlayerFactory();
             storage = new Storage();
