@@ -11,7 +11,7 @@ namespace Task0.Mediateka
         {
 
         }
-        void Play(File file)
+        void Play(int index)
         {
 
         }

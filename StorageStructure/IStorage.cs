@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Task0.FileStructure;
 
-namespace Task0.Storage
+namespace Task0.StorageStructure
 {
     interface IStorage
     {
