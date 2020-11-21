@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Task0.Files
+namespace Task0.FileStructure
 {
     internal class File
     {

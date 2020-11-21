@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Task0.Files;
+using Task0.FileStructure;
 
 namespace Task0.Storage.StorageImplementation
 {
@@ -13,6 +13,11 @@ namespace Task0.Storage.StorageImplementation
         }
 
         public File Find(string name)
+        {
+            return new File();
+        }
+
+        public File Find(int index)
         {
             return new File();
         }

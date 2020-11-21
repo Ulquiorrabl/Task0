@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Task0.Files.FileTypes;
+using Task0.FileStructure.FileTypes;
 
-namespace Task0.PlayerStructure.PlayerImplementation.PlayerTypes
+namespace Task0.Player.PlayerImplementation.PlayerTypes
 {
     class PlayerTrack : Player
     {

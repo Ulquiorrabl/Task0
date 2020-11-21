@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Task0.Files;
+using Task0.FileStructure;
 
 namespace Task0.Storage
 {
@@ -13,5 +13,6 @@ namespace Task0.Storage
 
         File Find(string name);
 
+        File Find(int index);
     }
 }

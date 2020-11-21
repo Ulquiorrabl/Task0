@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Task0.Files.FileTypes
+namespace Task0.FileStructure.FileTypes
 {
     class Track : File
     {
