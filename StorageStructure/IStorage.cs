@@ -13,6 +13,6 @@ namespace Task0.StorageStructure
 
         File Find(string name);
 
-        File Find(int index);
+        File FindById(int id);
     }
 }

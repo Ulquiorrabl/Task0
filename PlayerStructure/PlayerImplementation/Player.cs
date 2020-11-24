@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Task0.FileStructure;
 
-namespace Task0.Player.PlayerImplementation
+namespace Task0.PlayerStructure.PlayerImplementation
 {
     class Player : IPlayer
     {
@@ -12,12 +12,12 @@ namespace Task0.Player.PlayerImplementation
 
         }
 
-        public void Stop()
+        virtual public void Stop()
         {
 
         }
         
-        protected void Decode(File file)
+        void Decode(File file)
         {
 
         }

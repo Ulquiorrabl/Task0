@@ -17,7 +17,7 @@ namespace Task0.StorageStructure.StorageImplementation
             return new File();
         }
 
-        public File Find(int index)
+        public File FindById(int id)
         {
             return new File();
         }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Task0.FileStructure;
 
-namespace Task0.Player
+namespace Task0.PlayerStructure
 {
     interface IPlayer
     {
@@ -12,7 +12,7 @@ namespace Task0.Player
 
         }
 
-        void Stop()
+        virtual void Stop()
         {
 
         }

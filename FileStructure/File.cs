@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Task0.FileStructure
 {
-    internal class File
+    class File
     {
         public string Name { get; private set; }
         public float Size { get; private set; }

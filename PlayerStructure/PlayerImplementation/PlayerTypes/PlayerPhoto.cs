@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Task0.FileStructure.FileTypes;
 
-namespace Task0.Player.PlayerImplementation.PlayerTypes
+namespace Task0.PlayerStructure.PlayerImplementation.PlayerTypes
 {
     class PlayerPhoto : Player
     {

@@ -1,4 +1,5 @@
 ﻿using System;
+using Task0.MediatekaStructure.MediatekaImplementation;
 
 namespace Task0
 {
@@ -6,7 +7,9 @@ namespace Task0
     {
         static void Main(string[] args)
         {
-
+            Mediateka mediateka = new Mediateka();
+            mediateka.Play(0);
+            mediateka.PlayNext();
         }
     }
 }

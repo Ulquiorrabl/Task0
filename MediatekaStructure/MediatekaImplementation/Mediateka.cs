@@ -5,35 +5,53 @@ using Task0.Player.PlayerFactory.PlayerFactoryImplementation;
 using Task0.FileStructure;
 using Task0.StorageStructure.StorageImplementation;
 
-namespace Task0.Mediateka.MediatekaImplementation
+namespace Task0.MediatekaStructure.MediatekaImplementation
 {
     class Mediateka : IMediateka
     {
         PlayerFactory playerfactory;
         Storage storage;
-        int index;
+        enum Status
+        {
+            Play,
+            Stop,
+            Error
+        }
+
+        public int Index { get; private set; }
         
         public Mediateka()
         {
             playerfactory = new PlayerFactory();
             storage = new Storage();
-            index = 0;
+            Index = 0;
         }
-        public void Play(int index)
+        public Enum Play(int id)
         {
-            playerfactory.Play(storage.Find(index));
+            try
+            {
+                playerfactory.Play(storage.FindById(id));
+                return Status.Play;
+            }
+            catch (Exception e)
+            {
+                return Status.Error;
+            }
         }
-        public void PlayPrevious()
+        public Enum PlayPrevious()
         {
-            if(index != 0) { Play(index - 1); }
+            if(Index != 0) { Play(Index - 1); }
+            return Status.Play;
         }
-        public void PlayNext()
+        public Enum PlayNext()
         {
-            Play(index + 1);
+            Play(Index + 1);
+            return Status.Play;
         }
-        public void Stop()
+        public Enum Stop()
         {
             playerfactory.Stop();
+            return Status.Stop;
         }
     }
 }

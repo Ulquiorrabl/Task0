@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Task0.FileStructure;
 
-namespace Task0.Mediateka
+namespace Task0.MediatekaStructure
 {
     interface IMediateka
     {
@@ -11,10 +11,11 @@ namespace Task0.Mediateka
         {
 
         }
-        void Play(int index)
+        void Play(int id)
         {
 
         }
+
         void PlayPrevious()
         {
 
