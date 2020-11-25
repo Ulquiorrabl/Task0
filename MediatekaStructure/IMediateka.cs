@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 using Task0.FileStructure;
+using Task0.MediatekaStructure.StatusEnumerator;
 
 namespace Task0.MediatekaStructure
 {
     interface IMediateka
     {
-        Enum Play(int id);
-        Enum PlayPrevious();
-        Enum PlayNext();
-        Enum Stop();
+        Status Play(int id);
+        Status PlayPrevious();
+        Status PlayNext();
+        Status Stop();
     }
 }

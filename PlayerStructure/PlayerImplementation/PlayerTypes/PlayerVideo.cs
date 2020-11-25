@@ -12,7 +12,7 @@ namespace Task0.PlayerStructure.PlayerImplementation.PlayerTypes
             Decode(video);
         }
 
-        public new void Stop()
+        public override void Stop()
         {
 
         }

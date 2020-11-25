@@ -5,58 +5,60 @@ using Task0.PlayerStructure.PlayerFactory.PlayerFactoryImplementation;
 using Task0.FileStructure;
 using Task0.StorageStructure.StorageImplementation;
 using Task0.PlayerStructure.PlayerImplementation;
+using Task0.MediatekaStructure.StatusEnumerator;
 
 namespace Task0.MediatekaStructure.MediatekaImplementation
 {
+
     class Mediateka : IMediateka
     {
         PlayerFactory playerfactory;
         Player player;
         Storage storage;
-        enum Status
-        {
-            Play,
-            Stop,
-            Error
-        }
 
         public int Index { get; private set; }
+
+        public Status MediatekaStatus { get; private set; }
         
         public Mediateka()
         {
             playerfactory = new PlayerFactory();
             storage = new Storage();
             player = new Player();
+            MediatekaStatus = Status.Idle;
             Index = 0;
         }
-        public Enum Play(int id)
+        public Status Play(int id)
         {
             try
             {
                 File file = storage.FindById(id);
                 player = playerfactory.ReturnPlayer(file);
                 player.Play(file);
-                return Status.Play;
+                MediatekaStatus = Status.Play;
+                return MediatekaStatus;
             }
             catch (Exception e)
             {
-                return Status.Error;
+                MediatekaStatus = Status.Error;
+                return MediatekaStatus;
             }
         }
-        public Enum PlayPrevious()
+        public Status PlayPrevious()
         {
             if(Index != 0) { Play(Index - 1); }
-            return Status.Play;
+            MediatekaStatus = Status.Play;
+            return MediatekaStatus;
         }
-        public Enum PlayNext()
+        public Status PlayNext()
         {
             Play(Index + 1);
-            return Status.Play;
+            return MediatekaStatus;
         }
-        public Enum Stop()
+        public Status Stop()
         {
             player.Stop();
-            return Status.Stop;
+            return MediatekaStatus;
         }
     }
 }

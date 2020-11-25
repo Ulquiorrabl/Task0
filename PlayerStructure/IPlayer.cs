@@ -12,7 +12,7 @@ namespace Task0.PlayerStructure
 
         }
 
-        virtual void Stop()
+        void Stop()
         {
 
         }
