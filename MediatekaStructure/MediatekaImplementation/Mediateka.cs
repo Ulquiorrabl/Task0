@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Task0.Player.PlayerFactory.PlayerFactoryImplementation;
+using Task0.PlayerStructure.PlayerFactory.PlayerFactoryImplementation;
 using Task0.FileStructure;
 using Task0.StorageStructure.StorageImplementation;
+using Task0.PlayerStructure.PlayerImplementation;
 
 namespace Task0.MediatekaStructure.MediatekaImplementation
 {
     class Mediateka : IMediateka
     {
         PlayerFactory playerfactory;
+        Player player;
         Storage storage;
         enum Status
         {
@@ -24,13 +26,16 @@ namespace Task0.MediatekaStructure.MediatekaImplementation
         {
             playerfactory = new PlayerFactory();
             storage = new Storage();
+            player = new Player();
             Index = 0;
         }
         public Enum Play(int id)
         {
             try
             {
-                playerfactory.Play(storage.FindById(id));
+                File file = storage.FindById(id);
+                player = playerfactory.ReturnPlayer(file);
+                player.Play(file);
                 return Status.Play;
             }
             catch (Exception e)
@@ -50,7 +55,7 @@ namespace Task0.MediatekaStructure.MediatekaImplementation
         }
         public Enum Stop()
         {
-            playerfactory.Stop();
+            player.Stop();
             return Status.Stop;
         }
     }

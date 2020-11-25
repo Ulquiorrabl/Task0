@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 using Task0.FileStructure;
+using Task0.PlayerStructure.PlayerImplementation;
 
-namespace Task0.Player.PlayerFactory
+namespace Task0.PlayerStructure.PlayerFactory
 {
     interface IPlayerFactory
     {
-        void Play(File file);
-        void Stop();
+        Player ReturnPlayer(File file);
     }
 }
