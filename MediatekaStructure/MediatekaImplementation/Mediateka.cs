@@ -32,6 +32,7 @@ namespace Task0.MediatekaStructure.MediatekaImplementation
         {
             try
             {
+
                 File file = storage.FindById(id);
                 player = playerfactory.ReturnPlayer(file);
                 player.Play(file);

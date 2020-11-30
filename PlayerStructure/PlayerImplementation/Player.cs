@@ -9,7 +9,7 @@ namespace Task0.PlayerStructure.PlayerImplementation
     {
         public void Play(File file)
         {
-
+            Decode(file);
         }
 
         virtual public void Stop()

@@ -7,14 +7,8 @@ namespace Task0.PlayerStructure
 {
     interface IPlayer
     {
-        void Play(File file)
-        {
+        void Play(File file);
 
-        }
-
-        void Stop()
-        {
-
-        }
+        void Stop();
     }
 }

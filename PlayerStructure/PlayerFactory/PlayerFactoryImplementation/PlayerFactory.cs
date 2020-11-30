@@ -25,7 +25,7 @@ namespace Task0.PlayerStructure.PlayerFactory.PlayerFactoryImplementation
             {
                 return new PlayerTrack();
             }
-            else return null;
+            throw new Exception("Unexpexted file");
         }
 
     }
